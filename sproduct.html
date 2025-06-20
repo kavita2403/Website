@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping Website</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+
+    <link rel="stylesheet" href="style.css">
+    <style>/* =====================
+   Product Details Layout
+   ===================== */
+#prodetails {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.single-pro-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.single-pro-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.small-img-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.small-img-col {
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+.single-pro-details {
+    flex: 1;
+    padding: 20px;
+    min-width: 300px;
+}
+
+.single-pro-details h4 {
+    padding: 10px 0;
+    font-size: 24px;
+}
+
+.single-pro-details h2 {
+    font-size: 30px;
+    color: #088178;
+    margin: 20px 0;
+}
+
+.single-pro-details select,
+.single-pro-details input {
+    display: block;
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.single-pro-details button.normal {
+    background-color: #088178;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.single-pro-details button.normal:hover {
+    background-color: #06615f;
+}
+
+.single-pro-details span {
+    line-height: 1.6;
+    display: block;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* =====================
+   Responsive Design
+   ===================== */
+@media (max-width: 768px) {
+    #prodetails {
+        flex-direction: column;
+    }
+}
+
+/* =====================
+   Bonus UI Enhancements
+   ===================== */
+.star i {
+    color: #f0c040;
+    transition: transform 0.3s ease;
+}
+
+.star i:hover {
+    transform: scale(1.2);
+}
+
+.pro1 img {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.pro1 img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button.normal:active {
+    transform: scale(0.97);
+}
+
+select:focus,
+input:focus {
+    outline: none;
+    border-color: #088178;
+    box-shadow: 0 0 5px rgba(8, 129, 120, 0.5);
+}
+</style>
+</head>
+<body>
+
+    <section id="header"> 
+        <a href="#"><img src="image/logo.png" width="25%" class="logo" alt="shop"></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="shop.html">Shop</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="cart.html"> <i class="far fa-shopping-bag"></i>Cart </a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+         
+    </section>
+
+    <section id="page-header">
+         
+        <h2>#StayHome </h2>
+         
+        <p>Save more with coupons & up to 70% Trade-in-offer</p>
+         
+    </section>
+
+    <section id="prodetails" class="section-p1">
+        <div class="single-pro-image">
+            <img src="products/sproduct1.png" width="100%" id="MainImg" alt="">
+
+            <div class="small-img-group" >
+                <div class="small-img-col">
+                    <img src="products/sproduct2.png" width="100%" class="small-img">
+                </div>
+                <div class="small-img-col">
+                    <img src="products/sproduct3.png" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="products/sproduct4.png" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="products/sproduct5.png" width="100%" class="small-img" alt="">
+                </div>  
+            </div>
+        </div>
+        <div class="single-pro-details">
+            <h6>Home / T-shirt</h6>
+            <h4>Men Slim Fit Checkered Casual Shirt</h4>
+            <h2>₹471</h2>
+            <select>
+                <option>Select Size</option>
+                <option>XL</option>
+                <option> XXL</option>
+                <option>Small</option>
+                <option>Large</option>
+            </select>
+             
+            <input type="number" value="1" >
+            <button class="normal">Add To Cart</button>
+            <h4>Product Details</h4>
+            <span>Step up your Style Quotient by wearing this Casual T-shirt from LEWEL. 
+                Team it up with your favourite pair of jeans, 
+                denim shorts and sneakers when you head out to work, party, 
+                vacation or anything your heart desires. It’s your Life, 
+                your Rules and we will be all the way with you in style.</span>
+         
+        </div>
+    </section>
+
+    <section id="Newproduct1" class="section-p1">
+        <h1>Featured Product</h1>
+        <p>Summer Collection New Morden Design </p>
+        <div class="pro-container1">
+            <div class="pro1">
+                <img src="image/newproduct1.png" alt="">
+                <div class="des">
+                    <span>VTEXX </span>
+                    <h5>Men Regular Fit Solid Mandarin Collar Casual Shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₹299 </h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro1">
+                <img src="image/newproduct2.png" alt="">
+                <div class="des">
+                    <span>Majestic Man</span>
+                    <h5>Men Slim Fit Striped Spread Collar Casual Shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₹495 </h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro1">
+                <img src="image/newproduct3.png" alt="">
+                <div class="des">
+                    <span>FUBAR </span>
+                    <h5>Men Slim Fit Washed Mandarin Collar Casual Shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₹495</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro1">
+                <img src="image/newproduct4.png" alt="">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Men Slim Fit Solid Mandarin Collar Casual Shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₹369 </h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro1">
+                <img src="image/newproduct5.png" alt="">
+                <div class="des">
+                    <span>BOSQUE</span>
+                    <h5>Men Regular Fit Solid Button Down Collar Casual Shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₹669 </h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro1">
+                <img src="image/newproduct6.png" alt="">
+                <div class="des">
+                    <span>Majestic Man </span>
+                    <h5>Men Slim Fit Solid Spread Collar Casual Shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₹429 </h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            
+        </div>
+    </section>
+
+ 
+     <section id="newsletter" class="section-p1 section-m1" >
+        <div class="newstext">
+            <h4>Sign Up For Newsletters</h4>
+            <p>Get E-mail updates about shop and <span>Special Offers</span></p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Your E-mail address" id="">
+            <button>Sign Up</button>
+        </div>
+     </section>
+
+     <footer class="section-p1">
+        <div class="col">
+            <img src="" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong>MG Road ,Street 32,kolhapur</p>
+            <p><strong>Phone:</strong>+01 2222 332/(+91) 01 2333 2435</p>
+            <p><strong>Hours:</strong> 10:00 - 18:00 Mon - Sat</p>
+        </div>
+        <div class="follow">
+            <h4>Follow Us</h4>
+            <div class="icon">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Term & Condition</a>
+            <a href="#">Contact us</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="appstore.png" alt="">
+                <img src="googleplay.png" alt="">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="P1.png" alt=""> 
+        </div>
+        
+        <div class="copyright">
+            <p>@ 2023,Tech2 etc - Ecommerce Online shopping website</p>
+        </div>
+     </footer>
+
+    <script>
+        var MainImg = document.getElementById("MainImg");
+        var smallimg = document.getElementsByClassName("small-img");
+
+        smallimg[0].onclick = function(){
+            MainImg.src = smallimg[0].src;
+        }
+        smallimg[1].onclick = function(){
+            MainImg.src = smallimg[1].src;
+        }
+        smallimg[2].onclick = function(){
+            MainImg.src = smallimg[2].src;
+        }
+        smallimg[3].onclick = function(){
+            MainImg.src = smallimg[3].src;
+        }
+    </script>
+     
+</body>
+</html>

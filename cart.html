@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Shopping Cart</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+       /*Header Page*/
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color: aliceblue;
+    box-shadow: 0 5px 15px rgb(241, 159, 159);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#navbar {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+#navbar li a {
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: 0.3s ease;
+}
+#navbar li a:hover,
+#navbar li a.active {
+  background-color: #f44336;
+  color: #fff;
+}
+
+        .section-p1 { padding: 40px 80px; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 40px; }
+        table thead { background-color: #088178; color: white; }
+        table th, table td { padding: 15px; text-align: center; border: 1px solid #ccc; }
+        table td img { width: 60px; height: auto; }
+        table input[type='number'] { width: 50px; padding: 5px; }
+        
+
+        #cart-add { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; }
+        #coupon input { padding: 10px; width: 200px; }
+        #coupon button, #subtotal button { background: #088178; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px; }
+
+        #subtotal table { width: 100%; border-collapse: collapse; }
+        #subtotal table td { padding: 10px; border: 1px solid #ccc; }
+        footer { background-color: #f1f1f1; padding: 40px 80px; display: flex; flex-wrap: wrap; gap: 40px; }
+        footer .col { flex: 1; min-width: 200px; }
+        footer h4 { margin-bottom: 10px; }
+        footer a { display: block; margin-bottom: 5px; text-decoration: none; color: #333; }
+        footer .icon i { margin-right: 10px; }
+        .copyright { text-align: center; padding-top: 20px; }
+
+        @media (max-width: 768px) {
+            #cart-add { flex-direction: column; }
+            .section-p1 { padding: 20px; }
+            footer { flex-direction: column; padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <section id="header"> 
+        <a href="#"><img src="image/logo.png" width="25%" class="logo" alt="shop"></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About Us</a></li> 
+                <li><a class="active" href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="cart" class="section-p1">
+        <table id="cart-table">
+            <thead>
+                <tr>
+                    <th>Remove</th>
+                    <th>Image</th>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><i class="far fa-times-circle remove-item"></i></td>
+                    <td><img src="image/newproduct1.png" alt=""></td>
+                    <td>Men Regular Fit Solid Casual Shirt</td>
+                    <td class="price">299</td>
+                    <td><input type="number" class="quantity" value="1" min="1"></td>
+                    <td class="subtotal">299</td>
+                </tr>
+                <tr>
+                    <td><i class="far fa-times-circle remove-item"></i></td>
+                    <td><img src="image/newproduct2.png" alt=""></td>
+                    <td>Men Slim Fit Striped Spread Collar Casual Shirt</td>
+                    <td class="price">495</td>
+                    <td><input type="number" class="quantity" value="1" min="1"></td>
+                    <td class="subtotal">495</td>
+                </tr>
+                <tr>
+                    <td><i class="far fa-times-circle remove-item"></i></td>
+                    <td><img src="image/newproduct3.png" alt=""></td>
+                    <td>Men Slim Fit Washed Mandarin Collar Casual Shirt</td>
+                    <td class="price">495</td>
+                    <td><input type="number" class="quantity" value="1" min="1"></td>
+                    <td class="subtotal">495</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="cart-add" class="section-p1">
+        <div id="coupon">
+           <h3>Apply Coupon</h3> 
+           <div>
+            <input type="text" placeholder="Enter Your Coupon">
+            <button class="normal">Apply</button>
+           </div>
+        </div>
+        <div id="subtotal">
+             <h3>Cart Totals</h3>
+             <table> 
+                <tr>
+                   <td>Cart Subtotal</td>
+                   <td id="cart-subtotal">₹1289</td>
+               </tr> 
+                <tr>
+                    <td>Shipping</td>
+                    <td>Free</td>
+                </tr> 
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td id="cart-total"><strong>₹1289</strong></td>
+                </tr>
+             </table>
+             <button class="normal">Proceed to Checkout</button>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> MG Road, Street 32, Kolhapur</p>
+            <p><strong>Phone:</strong> +01 2222 332 / (+91) 01 2333 2435</p>
+            <p><strong>Hours:</strong> 10:00 - 18:00 Mon - Sat</p>
+        </div>
+        <div class="follow">
+            <h4>Follow Us</h4>
+            <div class="icon">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="appstore.png" alt="">
+                <img src="googleplay.png" alt="">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="P1.png" alt=""> 
+        </div>
+        <div class="copyright">
+            <p>@ 2023, Tech2 etc - Ecommerce Online Shopping Website</p>
+        </div>
+    </footer>
+
+    <script>
+        const quantityInputs = document.querySelectorAll('.quantity');
+        const subtotalCells = document.querySelectorAll('.subtotal');
+        const priceCells = document.querySelectorAll('.price');
+        const cartSubtotal = document.getElementById('cart-subtotal');
+        const cartTotal = document.getElementById('cart-total');
+        const removeButtons = document.querySelectorAll('.remove-item');
+
+        function updateTotals() {
+            let total = 0;
+            quantityInputs.forEach((input, index) => {
+                const price = parseFloat(priceCells[index].innerText);
+                const qty = parseInt(input.value);
+                const subtotal = price * qty;
+                subtotalCells[index].innerText = subtotal;
+                total += subtotal;
+            });
+            cartSubtotal.innerText = '₹' + total;
+            cartTotal.innerHTML = '<strong>₹' + total + '</strong>';
+        }
+
+        quantityInputs.forEach(input => {
+            input.addEventListener('change', updateTotals);
+        });
+
+        removeButtons.forEach((btn, index) => {
+            btn.addEventListener('click', () => {
+                btn.closest('tr').remove();
+                updateTotals();
+            });
+        });
+
+        window.addEventListener('DOMContentLoaded', updateTotals);
+    </script>
+</body>
+</html>
